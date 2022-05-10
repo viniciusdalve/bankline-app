@@ -1,3 +1,14 @@
+APLICAÇÃO ANGULAR
+
+***PRODUZINDO ....
+
+Projeto para desenvolver uma API REST para criação de extratos bancários do Santander
+
+Objetivo: construir do zero uma aplicação que gera extratos bancários com duas interfaces: mobile e fullstack, utilizando Java, Angular, Kotlin e Android.
+
+
+
+
 # BanklineApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
