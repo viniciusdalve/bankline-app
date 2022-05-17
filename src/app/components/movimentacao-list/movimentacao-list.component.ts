@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovimentacaoService } from 'src/app/services/movimentacao.service';
+import { MovimentacaoService } from 'src/app/services/movimentacao.service';
 
 @Component({
   selector: 'app-movimentacao-list',
@@ -10,14 +11,20 @@ export class MovimentacaoListComponent implements OnInit {
  
   //Criar uma variável para interagir com a parte HTML
   movimentacoes:any;
+  correntistas:any;
+  correntista:any;
 
-  constructor(private movimentacaoService: MovimentacaoService) { }
+
+
+  constructor(private movimentacaoService: MovimentacaoService
+                      correntistaService: CorrentistaService,) { }
 
   ngOnInit(): void {
-    this.listMovimentacoes();
+    this.exibirCorrentistas();
+    
   }
   listMovimentacoes(): void {
-    this.movimentacaoService.list()
+    this.movimentacaoService.list(this.correntista.id)
       .subscribe(
         data => {
           this.movimentacoes = data;
